@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+'''适用于http://www.yaoqmh.net/'''
 import requests
 from bs4 import BeautifulSoup
 import os
