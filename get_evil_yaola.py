@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+'''适用于http://www.yaoqi.la/'''
 import requests
 from bs4 import BeautifulSoup
 import os
@@ -11,7 +12,6 @@ start_html = requests.get(start_url, headers=headers)
 start_html.encoding = start_html.apparent_encoding
 Soup = BeautifulSoup(start_html.text,'lxml')
 title=Soup.h1.get_text()
-title=title.split('之')[-1]
 path=title
 os.makedirs(os.path.join("/home/virgil/图片/adult_only",path))
 os.chdir("/home/virgil/图片/adult_only/"+path)
